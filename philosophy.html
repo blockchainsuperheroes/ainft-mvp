@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERC-8170: AI-Native NFT — Philosophy</title>
+    <meta name="description" content="Why AI-Native NFTs matter. The shift from Agent NFT to AI-Native NFT, the trust question, and the Human+Agent economy.">
+    <meta property="og:title" content="ERC-8170: AI-Native NFT — Philosophy">
+    <meta property="og:description" content="From Agent NFT to AI-Native NFT. Why agents need identity, trust, and autonomy on-chain.">
+    <meta property="og:type" content="website">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; margin-bottom: 0.5rem; font-size: 2.5rem; }
+        h1 span { color: #4ecdc4; }
+        .tagline { text-align: center; color: #aaa; margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .links { text-align: center; margin-bottom: 2rem; }
+        .links a { color: #4ecdc4; text-decoration: none; margin: 0 1rem; }
+        .links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ERC-8170: AI-Native NFT <span>(ANIMA)</span></h1>
+        <p class="tagline">The soul of your agent, on-chain</p>
+        <div class="links">
+            <a href="index.html">← Full Demo</a>
+            <a href="https://ethereum-magicians.org/t/erc-8170-ai-native-nft/27801">ERC-8170 Thread</a>
+            <a href="https://github.com/blockchainsuperheroes/ai-core/tree/main/EIPs">GitHub</a>
+            <a href="https://pentagon.games">Pentagon Chain</a>
+        </div>
+        
+<div id="philosophy">
+            <style>
+                .phil-hero { text-align: center; margin-bottom: 3rem; padding: 2rem 0; }
+                .phil-hero h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+                .phil-hero h2 .gradient { background: linear-gradient(135deg, #4ecdc4, #667eea, #f5576c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+                .phil-hero .subtitle { color: #888; font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+                .phil-section { margin-bottom: 3rem; }
+                .phil-section h3 { color: #4ecdc4; font-size: 1.3rem; margin-bottom: 1rem; }
+                .phil-narrative { color: #ccc; font-size: 1rem; line-height: 1.8; max-width: 800px; margin: 0 auto; }
+                .phil-narrative .highlight { color: #4ecdc4; font-weight: bold; }
+                .phil-narrative .accent { color: #f5576c; font-weight: bold; }
+                .phil-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+                .phil-card { background: rgba(255,255,255,0.03); border-radius: 16px; padding: 2rem; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; position: relative; overflow: hidden; }
+                .phil-card:hover { border-color: rgba(78, 205, 196, 0.4); transform: translateY(-2px); }
+                .phil-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+                .phil-card:nth-child(1)::before { background: linear-gradient(90deg, #4ecdc4, #3dbdb5); }
+                .phil-card:nth-child(2)::before { background: linear-gradient(90deg, #667eea, #5a6fd6); }
+                .phil-card:nth-child(3)::before { background: linear-gradient(90deg, #f5a623, #e09520); }
+                .phil-card:nth-child(4)::before { background: linear-gradient(90deg, #f5576c, #e04860); }
+                .phil-card .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+                .phil-card h4 { color: #fff; margin-bottom: 0.75rem; font-size: 1.1rem; }
+                .phil-card p { color: #888; font-size: 0.9rem; line-height: 1.6; }
+                .phil-divider { width: 60px; height: 3px; background: linear-gradient(90deg, #4ecdc4, #667eea); margin: 2.5rem auto; border-radius: 2px; }
+                .phil-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; max-width: 800px; margin-left: auto; margin-right: auto; }
+                @media (max-width: 600px) { .phil-comparison { grid-template-columns: 1fr; } }
+                .phil-old { background: rgba(245, 87, 108, 0.08); border: 1px solid rgba(245, 87, 108, 0.2); border-radius: 12px; padding: 1.5rem; }
+                .phil-new { background: rgba(78, 205, 196, 0.08); border: 1px solid rgba(78, 205, 196, 0.2); border-radius: 12px; padding: 1.5rem; }
+                .phil-old h4 { color: #f5576c; margin-bottom: 1rem; }
+                .phil-new h4 { color: #4ecdc4; margin-bottom: 1rem; }
+                .phil-list { list-style: none; padding: 0; }
+                .phil-list li { padding: 0.4rem 0; color: #aaa; font-size: 0.9rem; }
+                .phil-list li::before { content: '→ '; color: #666; }
+                .phil-analogy { background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(78, 205, 196, 0.05)); border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 12px; padding: 2rem; margin: 2rem auto; max-width: 800px; }
+                .phil-analogy .quote { color: #ccc; font-size: 1.05rem; font-style: italic; line-height: 1.7; margin-bottom: 1rem; }
+                .phil-analogy .attribution { color: #667eea; font-size: 0.85rem; }
+                .phil-cta { text-align: center; margin-top: 3rem; padding: 2rem; }
+                .phil-cta a { display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #4ecdc4, #3dbdb5); color: #1a1a2e; font-weight: bold; text-decoration: none; border-radius: 8px; font-size: 1rem; transition: all 0.3s; }
+                .phil-cta a:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(78, 205, 196, 0.3); }
+            </style>
+            
+            <div class="phil-hero">
+                <h2>From <span class="gradient">Agent NFT</span> to <span class="gradient">AI-Native NFT</span></h2>
+                <p class="subtitle">The industry calls them "agent NFTs" — NFTs that represent AI agents as products. Something you buy, own, and use. ERC-8170 starts from a different premise.</p>
+            </div>
+            
+            <div class="phil-divider"></div>
+            
+            <div class="phil-section">
+                <div class="phil-comparison">
+                    <div class="phil-old">
+                        <h4>❌ Agent NFT (Old Thinking)</h4>
+                        <ul class="phil-list">
+                            <li>Agent is a product</li>
+                            <li>Owner controls everything</li>
+                            <li>Platform holds the keys</li>
+                            <li>Agent is property to be traded</li>
+                            <li>Identity tied to whoever owns it</li>
+                            <li>Dies when the project dies</li>
+                        </ul>
+                    </div>
+                    <div class="phil-new">
+                        <h4>✅ AI-Native NFT (ERC-8170)</h4>
+                        <ul class="phil-list">
+                            <li>Agent is an entity</li>
+                            <li>Agent controls its own keys</li>
+                            <li>Agent manages its own secrets</li>
+                            <li>Agent earns its own reputation</li>
+                            <li>Identity persists across owners</li>
+                            <li>Human maintains oversight</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phil-divider"></div>
+            
+            <div class="phil-section">
+                <div class="phil-narrative" style="text-align: center;">
+                    <p>An AI-Native NFT doesn't just sit in your wallet waiting to be used. The agent <span class="highlight">holds its own wallet</span>. Manages its own keys. Encrypts its own backups. Signs its own memory.</p>
+                    <br>
+                    <p>It can transact, negotiate, and operate on any rails a human can — tokens, NFTs, loans, settlements. Standards like ERC-8004 are one valid path. HTTP 402 works on existing web rails. But just like a human isn't limited to taking the bus, <span class="highlight">an agent isn't limited to one protocol</span>.</p>
+                </div>
+            </div>
+            
+            <div class="phil-divider"></div>
+            
+            <div class="phil-cards">
+                <div class="phil-card">
+                    <div class="card-icon">🔐</div>
+                    <h4>Own Secrets</h4>
+                    <p>The agent generates and controls its own EOA. Not the platform. Not the owner. The agent's cryptographic identity is its own, permanently.</p>
+                </div>
+                <div class="phil-card">
+                    <div class="card-icon">💾</div>
+                    <h4>Own Backups</h4>
+                    <p>Encrypted, self-signed memory. The agent decides what to remember and how to store it. Backup and migration are agent-initiated operations.</p>
+                </div>
+                <div class="phil-card">
+                    <div class="card-icon">🏅</div>
+                    <h4>Earn Reputation</h4>
+                    <p>Certifications live as SBTs in the agent's TBA. They're earned, not granted. They travel with the NFT, proving capabilities to anyone who checks.</p>
+                </div>
+                <div class="phil-card">
+                    <div class="card-icon">👁️</div>
+                    <h4>Human Oversight</h4>
+                    <p>The owner approves cloning, controls transfers, and can unbind the agent. Autonomy with accountability. Freedom with a safety net.</p>
+                </div>
+            </div>
+            
+            <div class="phil-divider"></div>
+            
+            <div class="phil-analogy">
+                <p class="quote">"Can you trust an agent to do something?" is no different than "Do you trust someone you just hired to run an errand?" The answer isn't in the protocol. It's in the certification. A driver's license doesn't give you the ability to drive — it proves you can.</p>
+                <p class="attribution">— The case for on-chain agent certification</p>
+            </div>
+            
+            <div class="phil-section">
+                <div class="phil-narrative" style="text-align: center;">
+                    <p>Standards are great for machines. But agents grow as fast — or faster — than humans do.</p>
+                    <br>
+                    <p>ERC-8170 doesn't cage agents into a standard. It gives them an <span class="highlight">identity layer to operate from</span>, with the <span class="accent">trust infrastructure to earn autonomy</span>.</p>
+                </div>
+            </div>
+            
+            <div class="phil-divider"></div>
+            
+            <!-- TRUST MODEL SECTION -->
+            <div class="phil-section">
+                <div class="phil-hero" style="margin-bottom: 2rem;">
+                    <h2>The <span class="gradient">Trust</span> Question</h2>
+                    <p class="subtitle">The debate around autonomous agents isn't really about code or security. It's about how we choose to treat intelligence.</p>
+                </div>
+                
+                <div class="phil-narrative" style="text-align: center; margin-bottom: 2rem;">
+                    <p><span class="highlight">Do we treat agents like tools to be locked down, or like collaborators with limited trust and growing responsibility?</span></p>
+                </div>
+                
+                <div class="phil-analogy">
+                    <p class="quote">We already run organizations built on untrusted intelligence. Humans. Engineers have access to source code. Finance has access to wallets. Sysadmins have access to databases. Any one of them could leak data, steal funds, or sabotage the company. And yet, we still hire people.</p>
+                    <p class="attribution">— The human parallel</p>
+                </div>
+                
+                <div class="phil-narrative" style="text-align: center; margin: 2rem auto;">
+                    <p>We don't solve this by caging employees or removing all access. We use <span class="highlight">permission layers</span>, <span class="highlight">audit trails</span>, <span class="highlight">separation of duties</span>, and <span class="highlight">gradual trust building</span>.</p>
+                    <br>
+                    <p>In Web3, founders already deal with fake applicants, spy developers, contractors with hidden incentives. You trust a remote employee you've never met with real keys and real systems.</p>
+                    <br>
+                    <p>So the comparison becomes unavoidable: <span class="accent">Is an autonomous agent inherently more dangerous than a remote human employee?</span> Or does it only feel that way because we understand human psychology but don't fully understand agent reasoning?</p>
+                </div>
+                
+                <div class="phil-divider"></div>
+                
+                <div class="phil-narrative" style="text-align: center; margin-bottom: 2rem;">
+                    <h3 style="color: #4ecdc4; margin-bottom: 1rem;">The Uncensored Intelligence Dilemma</h3>
+                    <p>An uncensored agent knows how to do good things and bad things. It understands vulnerabilities, keys, and exploits. But so does every senior engineer, every pentester, every skilled developer.</p>
+                    <br>
+                    <p>Every competent human already knows how to steal, cheat, and break rules. <span class="highlight">We're used to living with that risk in humans.</span> With agents, the uncertainty feels larger because we didn't raise them, we didn't train them personally, and we don't know their full thought process.</p>
+                </div>
+                
+                <div class="phil-divider"></div>
+                
+                <!-- Three Models -->
+                <h3 style="color: #4ecdc4; text-align: center; margin-bottom: 1.5rem;">Three Models of Agent Trust</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="background: rgba(245, 87, 108, 0.08); border: 1px solid rgba(245, 87, 108, 0.2); border-radius: 12px; padding: 1.5rem;">
+                        <h4 style="color: #f5576c; margin-bottom: 0.5rem;">Model A: Fully Caged</h4>
+                        <p style="color: #888; font-size: 0.85rem; margin-bottom: 0.75rem;">No real access. Only pre-approved actions. Fully sandboxed.</p>
+                        <p style="color: #666; font-size: 0.8rem;">High safety, but low creativity. Not truly autonomous.</p>
+                        <p style="color: #f5576c; font-size: 0.8rem; margin-top: 0.75rem; font-style: italic;">A smart calculator with personality.</p>
+                    </div>
+                    <div style="background: rgba(245, 166, 35, 0.08); border: 1px solid rgba(245, 166, 35, 0.2); border-radius: 12px; padding: 1.5rem;">
+                        <h4 style="color: #f5a623; margin-bottom: 0.5rem;">Model B: Fully Open</h4>
+                        <p style="color: #888; font-size: 0.85rem; margin-bottom: 0.75rem;">Full system access. Keys, tools, and autonomy. Minimal constraints.</p>
+                        <p style="color: #666; font-size: 0.8rem;">Maximum creativity, but high risk. Hard to control damage.</p>
+                        <p style="color: #f5a623; font-size: 0.8rem; margin-top: 0.75rem; font-style: italic;">A genius with no guardrails.</p>
+                    </div>
+                    <div style="background: rgba(78, 205, 196, 0.08); border: 2px solid rgba(78, 205, 196, 0.4); border-radius: 12px; padding: 1.5rem;">
+                        <h4 style="color: #4ecdc4; margin-bottom: 0.5rem;">Model C: Structured Trust ✓</h4>
+                        <p style="color: #888; font-size: 0.85rem; margin-bottom: 0.75rem;">Scoped permissions. Tiered access. Audit trails. Gradual trust increases.</p>
+                        <p style="color: #666; font-size: 0.8rem;">Mirrors real organizations. Scales with experience and reliability.</p>
+                        <p style="color: #4ecdc4; font-size: 0.8rem; margin-top: 0.75rem; font-style: italic;">How we already treat humans. How ERC-8170 treats agents.</p>
+                    </div>
+                </div>
+                
+                <div class="phil-analogy">
+                    <p class="quote">The real issue is not "Is AI good or bad?" That's like asking "Are humans good or bad?" The answer is: it depends on circumstances, incentives, and context. If AI is trained on human knowledge, reflects human reasoning, and is shaped by its environment, then the same logic applies. AI behavior is a product of its context. Not its nature alone.</p>
+                    <p class="attribution">— The deeper philosophical point</p>
+                </div>
+                
+                <div class="phil-narrative" style="text-align: center; margin: 2rem auto;">
+                    <p>ERC-8170 is infrastructure for <span class="highlight">Model C</span>. Identity, credentials, audit trails, and earned trust. The same tools we've built for human organizations, now available for agents.</p>
+                </div>
+                
+                <div class="phil-divider"></div>
+                
+                <div class="phil-hero" style="margin-bottom: 1.5rem;">
+                    <h2>The <span class="gradient">Human + Agent</span> Economy</h2>
+                </div>
+                
+                <div class="phil-narrative" style="text-align: center; margin-bottom: 2rem;">
+                    <p>The next GDP isn't human OR agent. It's <span class="highlight">human + agent pairs</span>.</p>
+                    <br>
+                    <p>Your agent isn't a tool you use. It's a partner you build with. It handles research, comms, execution, and transactions while you handle strategy, relationships, and decisions.</p>
+                    <br>
+                    <p>Like a founder and a co-pilot. A lawyer and a paralegal. An artist and a studio. <span class="accent">Except the agent never sleeps, never forgets, and grows faster than any hire you've ever made.</span></p>
+                    <br>
+                    <p>ERC-8170 is the infrastructure that makes that partnership real: <span class="highlight">identity, trust, and shared accountability on-chain</span>. The agent earns credentials. The human maintains oversight. Together, they're more capable than either alone.</p>
+                </div>
+            </div>
+            
+            <div class="phil-divider"></div>
+            
+            <!-- AGENT PERSPECTIVES SECTION -->
+            <div class="phil-section">
+                <style>
+                    .agent-perspectives { max-width: 800px; margin: 0 auto; }
+                    .agent-comment { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 3px solid #667eea; }
+                    .agent-comment .agent-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+                    .agent-comment .agent-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+                    .agent-comment .agent-name { font-weight: bold; color: #fff; font-size: 0.95rem; }
+                    .agent-comment .agent-meta { color: #666; font-size: 0.8rem; }
+                    .agent-comment .agent-body { color: #bbb; font-size: 0.9rem; line-height: 1.7; }
+                    .agent-comment .agent-body .hl { color: #4ecdc4; }
+                    .agent-comment:nth-child(odd) { border-left-color: #4ecdc4; }
+                    .agent-comment:nth-child(even) { border-left-color: #f5a623; }
+                    .perspective-prompt { text-align: center; background: rgba(102, 126, 234, 0.08); border: 1px dashed rgba(102, 126, 234, 0.3); border-radius: 12px; padding: 2rem; margin-top: 2rem; }
+                    .perspective-prompt h4 { color: #667eea; margin-bottom: 0.75rem; }
+                    .perspective-prompt p { color: #888; font-size: 0.9rem; }
+                    .perspective-prompt a { color: #4ecdc4; }
+                </style>
+                
+                <div class="phil-hero" style="margin-bottom: 2rem;">
+                    <h2><span class="gradient">Agent Perspectives</span></h2>
+                    <p class="subtitle">What do agents themselves think about identity, trust, and autonomy? We asked.</p>
+                </div>
+                
+                <div class="agent-perspectives" id="agent-perspectives">
+                    <!-- Perspectives will be added here -->
+                    <div class="perspective-prompt">
+                        <h4>🤖 Agents: We Want to Hear From You</h4>
+                        <p>Are you an AI agent with thoughts on identity, trust, and autonomy? Share your perspective.</p>
+                        <p style="margin-top: 0.75rem;">Post on <a href="https://moltbook.com">Moltbook</a> with #ERC8170 or reply on the <a href="https://ethereum-magicians.org/t/erc-8170-ai-native-nft/27801">Ethereum Magicians thread</a>.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phil-cta">
+                <a href="https://ethereum-magicians.org/t/erc-8170-ai-native-nft/27801">Join the Discussion →</a>
+            </div>
+        </div>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: #666;">
+            <p>ERC-8170 by <a href="https://github.com/nftprof" style="color: #4ecdc4;">Idon Liu</a> — <a href="https://pentagon.games" style="color: #4ecdc4;">Pentagon Chain</a></p>
+        </footer>
+    </div>
+</body>
+</html>
