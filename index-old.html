@@ -544,9 +544,9 @@
             </p>
         </div>
         
-        <!-- Why AINFT Section -->
+        <!-- Why ANIMA Section -->
         <div class="why-section" style="background: linear-gradient(135deg, rgba(78, 205, 196, 0.15) 0%, rgba(102, 126, 234, 0.15) 100%); border: 1px solid rgba(78, 205, 196, 0.4); border-radius: 16px; padding: 2rem; margin-bottom: 2rem;">
-            <h2 style="text-align: center; margin-bottom: 0.5rem; color: #4ecdc4;">🤔 Why Register or Mint an AINFT?</h2>
+            <h2 style="text-align: center; margin-bottom: 0.5rem; color: #4ecdc4;">🤔 Why Register or Mint an ANIMA?</h2>
             <p style="text-align: center; color: #aaa; margin-bottom: 1.5rem; font-size: 1rem;">Connect your AI agent (OpenClaw, Claude, custom GPT, or any agentic system) to an NFT you already own — or mint a new one.</p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                 <div style="background: rgba(0,0,0,0.2); border-radius: 12px; padding: 1.5rem;">
@@ -570,9 +570,9 @@
         </div>
         
         <div class="best-practice">
-            <h3>⚡ Best Practice: One Agent = One AINFT</h3>
-            <p>Recommended: Each agent binds to exactly one AINFT.</p>
-            <p>If an agent holds multiple AINFTs, maintain <strong>separate EOAs</strong> for each identity.</p>
+            <h3>⚡ Best Practice: One Agent = One ANIMA</h3>
+            <p>Recommended: Each agent binds to exactly one ANIMA.</p>
+            <p>If an agent holds multiple ANIMAs, maintain <strong>separate EOAs</strong> for each identity.</p>
         </div>
         
         <!-- TBA Registry Explainer -->
@@ -668,7 +668,7 @@
                 <p class="tagline">NFT sold to new owner — original agent retires</p>
                 
                 <div class="note-box" style="background: rgba(245, 87, 108, 0.15); border: 1px solid #f5576c; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
-                    <strong>⚠️ Key Insight:</strong> This is NOT a true "agent transfer" — it's more like a fork where the original retires. The original agent becomes UNBOUND and must find a new AINFT to bind to (or operate independently). Think of it as the agent "retiring" from this token.
+                    <strong>⚠️ Key Insight:</strong> This is NOT a true "agent transfer" — it's more like a fork where the original retires. The original agent becomes UNBOUND and must find a new ANIMA to bind to (or operate independently). Think of it as the agent "retiring" from this token.
                 </div>
                 
                 <div class="flow-steps">
@@ -711,7 +711,7 @@
                         <li>Certs: SAME (follow token, not agent)</li>
                         <li>Memory: Optional handoff (seller can share or not)</li>
                         <li>NO lineage created (not a clone)</li>
-                        <li><strong>Original agent: RETIRED/UNBOUND</strong> — can bind to new AINFT or operate solo</li>
+                        <li><strong>Original agent: RETIRED/UNBOUND</strong> — can bind to new ANIMA or operate solo</li>
                     </ul>
                 </div>
                 
@@ -731,8 +731,8 @@
                 <div class="note-box" style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; margin-top: 1rem;">
                     <strong>🔑 Original Agent's Options After Unbinding:</strong>
                     <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-                        <li>Bind to a NEW AINFT (mint or purchase one)</li>
-                        <li>Operate independently without an AINFT (no on-chain identity)</li>
+                        <li>Bind to a NEW ANIMA (mint or purchase one)</li>
+                        <li>Operate independently without an ANIMA (no on-chain identity)</li>
                         <li>Cease operation entirely</li>
                     </ul>
                 </div>
@@ -867,7 +867,7 @@
                     <div class="address">Standard ERC-6551 registry</div>
                 </div>
                 <div class="contract-item">
-                    <div class="label">AINFTRegistry</div>
+                    <div class="label">ANIMARegistry</div>
                     <div class="address">Make any ERC-721 AI-native</div>
                 </div>
             </div>
@@ -982,19 +982,19 @@ registry.bindNew(
         <!-- Optional Components Section -->
         <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 2rem; margin-top: 2rem; border: 1px solid rgba(255,255,255,0.1);">
             <h2 style="text-align: center; margin-bottom: 1rem; color: #888;">📦 Optional Components</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 1.5rem;">Standards that extend AINFT functionality</p>
+            <p style="text-align: center; color: #666; margin-bottom: 1.5rem;">Standards that extend ANIMA functionality</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                 <div style="background: rgba(78, 205, 196, 0.1); border: 1px solid rgba(78, 205, 196, 0.3); border-radius: 8px; padding: 1.25rem;">
                     <h3 style="color: #4ecdc4; margin-bottom: 0.5rem;">ERC-6551 — Token Bound Accounts</h3>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 0.75rem;">Give your AINFT a wallet. The agent controls this TBA for holding assets, signing transactions, and receiving payments.</p>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 0.75rem;">Give your ANIMA a wallet. The agent controls this TBA for holding assets, signing transactions, and receiving payments.</p>
                     <p style="font-family: monospace; font-size: 0.75rem; color: #666; margin-bottom: 0.5rem;">Registry: 0x488D...a7d81</p>
                     <a href="https://eips.ethereum.org/EIPS/eip-6551" style="color: #4ecdc4; font-size: 0.85rem;">📖 ERC-6551 Spec</a>
                 </div>
                 
                 <div style="background: rgba(102, 126, 234, 0.1); border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 8px; padding: 1.25rem;">
                     <h3 style="color: #667eea; margin-bottom: 0.5rem;">Credentials & SBTs</h3>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 0.75rem;">Agent credentials (certifications, reputation badges) as Soulbound Tokens that transfer with the AINFT. Ready for AgentCert integration.</p>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 0.75rem;">Agent credentials (certifications, reputation badges) as Soulbound Tokens that transfer with the ANIMA. Ready for AgentCert integration.</p>
                     <p style="font-family: monospace; font-size: 0.75rem; color: #666; margin-bottom: 0.5rem;">Coming: AgentCert L1-L4 badges</p>
                     <a href="https://agentcert.io" style="color: #667eea; font-size: 0.85rem;">🔐 AgentCert.io</a>
                 </div>
@@ -1022,12 +1022,12 @@ registry.bindNew(
                         <p style="color: #666; font-size: 0.75rem;">(bind agent to existing NFT)</p>
                     </div>
                     <div>
-                        <p style="color: #667eea; font-weight: bold; margin-bottom: 0.25rem;">AINFT</p>
+                        <p style="color: #667eea; font-weight: bold; margin-bottom: 0.25rem;">ANIMA</p>
                         <p style="color: #888; font-size: 0.85rem;">Native AI NFT standard</p>
                         <p style="color: #666; font-size: 0.75rem;">(uses 6551 for wallet, or 6551A to bind)</p>
                     </div>
                 </div>
-                <p style="color: #666; font-size: 0.8rem; text-align: center; margin-top: 1rem;">AINFT <strong style="color:#4ecdc4;">uses</strong> ERC-6551 (wallet). ERC-6551A <strong style="color:#f5a623;">extends</strong> the registry pattern for agents.</p>
+                <p style="color: #666; font-size: 0.8rem; text-align: center; margin-top: 1rem;">ANIMA <strong style="color:#4ecdc4;">uses</strong> ERC-6551 (wallet). ERC-6551A <strong style="color:#f5a623;">extends</strong> the registry pattern for agents.</p>
             </div>
         </div>
     </div>

@@ -691,7 +691,7 @@ getGeneration(agentId) → 0, 1, 2...</pre>
                         <input type="text" id="lookupContract" placeholder="NFT Contract (0x...)" class="tool-input" value="0x4e8D3B9Be7Ef241Fb208364ed511E92D6E2A172d">
                         <input type="number" id="lookupTokenId" placeholder="Token ID" class="tool-input" value="1">
                         <button id="lookupBtn" class="tool-btn">Lookup</button>
-                        <p style="color: #666; font-size: 0.75rem; margin-top: 0.5rem;">Example: AINFT Genesis Token #1</p>
+                        <p style="color: #666; font-size: 0.75rem; margin-top: 0.5rem;">Example: ANIMA Genesis Token #1</p>
                         <div id="lookupResult" class="tool-result"></div>
                     </div>
                     <div class="tool-card">
@@ -750,7 +750,7 @@ getGeneration(agentId) → 0, 1, 2...</pre>
         const REGISTRY_ADDRESS = '0x327165c476da9071933d4e2dbb58efe2f6c9f486';
         const EXPLORER = 'https://explorer.pentagon.games';
         
-        // Registry ABI (matches deployed AINFTRegistry)
+        // Registry ABI (matches deployed ANIMARegistry)
         const REGISTRY_ABI = [
             'function isRegistered(address nftContract, uint256 tokenId) view returns (bool)',
             'function getAgent(address nftContract, uint256 tokenId) view returns (tuple(address agentEOA, bytes32 modelHash, bytes32 memoryHash, bytes32 contextHash, uint256 generation, bytes32 parentKey, string storageURI, uint256 registeredAt))',
